@@ -19,31 +19,7 @@ Enviar um Log: Use o método sendLog para enviar um log para o SQS.
 # Exemplo com import ES6
 
 ```javascript
-import LogSender from 'elevaty-logger';
-
-LogSender.configure({
-  region: REGION,
-  queueUrl: QUEUE_URL,
-  accessKeyId: AWS_ACCESS_KEY_ID,
-  secretAccessKey: AWS_SECRET_ACCESS_KEY,
-  application: 'your-application-name',
-});
-
-// Em qualquer parte de sua applicação você pode enviar um log
-const meuLog = {
-  level: 'info',
-  application: 'minhaAplicacao',
-  merchant: '123',
-  // outros campos do log...
-};
-
-LogSender.sendLog(meuLog)
-```
-
-## Exemplo com require CommonJS
-
-```javascript
-const logSender = require('elevaty-logger');
+import { logSender } from 'elevaty-logger';
 
 logSender.configure({
   region: REGION,
@@ -64,6 +40,45 @@ const meuLog = {
 logSender.sendLog(meuLog)
 ```
 
+## Exemplo com require CommonJS
+
+```javascript
+const { logSender } = require('elevaty-logger');
+
+logSender.configure({
+  region: REGION,
+  queueUrl: QUEUE_URL,
+  accessKeyId: AWS_ACCESS_KEY_ID,
+  secretAccessKey: AWS_SECRET_ACCESS_KEY,
+  application: 'your-application-name',
+});
+
+// Em qualquer parte de sua applicação você pode enviar um log
+const meuLog = {
+  level: 'info',
+  application: 'minhaAplicacao',
+  merchant: '123',
+  // outros campos do log...
+};
+
+logSender.sendLog(meuLog)
+```
+
+## Se desejar ver os dados de retorno:
+
+```javascript
+const result = await logSender.sendLog(meuLog)
+console.log(result)
+```
+
+## Utilizando than e catch:
+
+```javascript
+logSender.sendLog(meuLog)
+  .then(result => console.log(result))
+  .catch(error => console.log(error))
+```
+
 # Estrutura do Log
 Os logs devem seguir a estrutura abaixo:
 
@@ -78,4 +93,3 @@ Para rodar os testes, execute o comando abaixo:
 ```bash
 npm run test
 ```
-
