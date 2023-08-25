@@ -26,5 +26,11 @@
   "bugs": {
     "url": "https://github.com/lucatsf/elevaty-logger/issues"
   },
-  "homepage": "https://github.com/lucatsf/elevaty-logger#readme"
+  "homepage": "https://github.com/lucatsf/elevaty-logger#readme",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.398.0",
+    "@types/node": "^20.5.6",
+    "chalk": "4.1.2",
+    "dotenv": "^16.3.1"
+  }
 }

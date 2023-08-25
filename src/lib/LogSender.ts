@@ -1,7 +1,7 @@
 import { config } from 'dotenv';
 import  { SQSClient, SendMessageCommand } from "@aws-sdk/client-sqs";
 import { hostname, platform } from 'os';
-import chalk from 'chalk';
+const chalk = require('chalk');
 
 config();
 
@@ -75,9 +75,6 @@ class LogSender {
   }
 
   validateObjectLog(log: {}) {
-    if (typeof log !== 'object') {
-      throw new Error('Log must be an object');
-    }
     const RequiredFields = ['level'];
     const isValid = RequiredFields.every(field => log.hasOwnProperty(field) && log[field] !== null && log[field] !== '');
     if (!isValid) {
