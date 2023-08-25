@@ -2,7 +2,7 @@
   "name": "elevaty-logger",
   "version": "1.0.0",
   "description": "A library to format and send logs following a specific pattern for the SQS queues of elevaty applications, as defined by the system architecture.",
-  "repository": "git+https://github.com/lucatsf/logs-elevaty.git",
+  "repository": "git+https://github.com/lucatsf/elevaty-logger.git",
   "author": "Lucas Torres <lucastorresfellicio@gmail.com>",
   "license": "MIT",
   "scripts": {

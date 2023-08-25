@@ -7,7 +7,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucatsf/logs-elevaty.git"
+    "url": "git+https://github.com/lucatsf/elevaty-logger"
   },
   "files": [
     "lib",
@@ -24,7 +24,7 @@
   "author": "Lucas Torres <lucastorresfellicio@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lucatsf/logs-elevaty/issues"
+    "url": "https://github.com/lucatsf/elevaty-logger/issues"
   },
-  "homepage": "https://github.com/lucatsf/logs-elevaty#readme"
+  "homepage": "https://github.com/lucatsf/elevaty-logger#readme"
 }
