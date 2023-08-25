@@ -1,0 +1,30 @@
+{
+  "name": "elevaty-logger",
+  "version": "1.0.0",
+  "description": "A library to format and send logs following a specific pattern for the SQS queues of elevaty applications, as defined by the system architecture.",
+  "main": "lib/es5/index.js",
+  "module": "lib/es6/index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucatsf/logs-elevaty.git"
+  },
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "javascript",
+    "log",
+    "elevaty"
+  ],
+  "author": "Lucas Torres <lucastorresfellicio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucatsf/logs-elevaty/issues"
+  },
+  "homepage": "https://github.com/lucatsf/logs-elevaty#readme"
+}
